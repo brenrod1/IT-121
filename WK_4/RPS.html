@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Math.random()</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="message"></div>
+<button onclick="getRandomNumber()">Get Random Number</button>
+
+<script>
+function getRandomNumber() {
+var randomNumber = Math.random() *3;
+var roundedNumber = Math.floor(randomNumber);
+Math.floor()
+document.getElementById("message").innerHTML = roundedNumber;
+}
+
+      </script>
+    </body>
+</html>
