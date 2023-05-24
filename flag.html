@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<title>Chapter_7 Assignment</title>
+
+</head>
+
+<body>
+
+<img src="american.png" onclick="changeImg(event)" />
+
+<img src="spanish.jpg" onclick="changeImg(event)" />
+
+<script>
+
+    var myImages = ["american.png", "spanish.jpg"];
+
+    function changeImg(e) { var el = e.target;
+    var newImgNumber = (Math.round(Math.random()) * 3);
+
+    while(el.src.indexOf(myImages[newImgNumber]) != -1) {newImgNumber = Math.round(Match.random() * 3);
+    }
+
+    el.src = myImages[newImgNumber];
+    } 
+    
+    
+
+</script>
+
+</body>
+
+</html>
