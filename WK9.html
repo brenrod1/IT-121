@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>   
+         <title>Complete JavaScript Course</title>
+</head>
+<body> 
+
+        <h1>Week 9 Assignment</h1>
+        <h2>Email Extractor</h2>
+        <textarea name="txtarea" rows=2 cols=50></textarea>
+        <button>Get Emails</button>
+        <textarea name="txtarea2" rows=2 cols=50></textarea>
+
+        
+<script>
+      //Select the text area elements and the button
+const firstArea = document.querySelector("textarea[name='txtarea']");
+const secArea = document.querySelector("textarea[name='txtarea2']");
+const button = document.querySelector("button");
+
+button.addEventListener("click", lookUp);
+
+function lookUp() {
+
+            const rawTxt = firstArea.value; //get the value of the firstArea and store it in the rawTxt VARIABLE
+            const eData = rawTxt.match (
+                   /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/gi);
+            
+            
+//use rejex to extract emails
+const holder = [];  //use array to store unique address
+//iTERATE THROUGH EACH ELEMENT
+for (let x = 0; x <eData.length; x++) {
+//if the current email address is not the 'holder' array, push it.
+
+   if (holder.indexOf(eData[x]) == -1) {
+      holder.push(eData[x]);
+
+                  }
+
+            }
+            secArea.value = holder.join(',');
+      }
+            
+</script>
+</body>
+</html>
